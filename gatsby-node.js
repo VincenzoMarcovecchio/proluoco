@@ -1,5 +1,5 @@
-const strutto = require("./src/components/strutture.json")
 const path = require("path")
+const strutto = require("./src/components/strutture.json")
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions

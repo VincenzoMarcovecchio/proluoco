@@ -1,10 +1,9 @@
-import React from "react"
+import * as React from "react"
 import { GatsbySeo, LocalBusinessJsonLd } from "gatsby-plugin-next-seo"
 import { Link } from "gatsby"
 import Button from "../components/Button/Button"
 import { PostSingleStyles } from "../components/Post/PostStyles"
 import LatestPosts from "../components/Post/LatestPosts"
-import RichText from "../components/RichText"
 
 const Strutto = ({ pageContext }) => {
   let strutte = pageContext.data
@@ -24,7 +23,7 @@ const Strutto = ({ pageContext }) => {
 
   return (
     <>
-    <GatsbySeo
+      <GatsbySeo
         title={title}
         description={`${title} - ${where} - ${stelle} 
   `}
@@ -49,7 +48,7 @@ const Strutto = ({ pageContext }) => {
           cardType: "summary_large_image",
         }}
       />
-     <LocalBusinessJsonLd
+      <LocalBusinessJsonLd
         type={`${tipostrutta}`}
         id={`https://www.prolocofraine.org/${path}`}
         name={`${title}  ${where} `}
@@ -68,60 +67,57 @@ const Strutto = ({ pageContext }) => {
           latitude: "",
           longitude: "",
         }}
-        images={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIAmJeiVbpL8Xd6WT_UZ8afZa0783vgzV8Jg&usqp=CAU"}
+        images={
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIAmJeiVbpL8Xd6WT_UZ8afZa0783vgzV8Jg&usqp=CAU"
+        }
       />
       <section>
         <PostSingleStyles>
           {title && <h1 className="blogsingle__title">{title}</h1>}
-      
-          {tipostrutta && (
-            <article className="blogsingle__content">
-               <p style={{ textTransform: "capitalize" }}>{tipostrutta}</p>
-        <p>
-          {where} | {stelle}
-        </p>
-        <p>
-          <b>Indirizzo:&nbsp;</b>
-          {indi}
-        </p>
-        <p>
-          <b>Telefono:&nbsp;</b>
-          {tel}
-        </p>
-        <p>
-          <b>Email:&nbsp;</b>
-          {email}
-        </p>
-        <p>
-          <b>Web:&nbsp;</b>
-          {sito}
-        </p>
-        <small style={{ marginTop: "3rem", marginBottom: "2rem" }}>
-          OPEN DATA REGIONE ABRUZZO GENNAIO 2021
-        </small>
 
-        <iframe
-          width="100%"
-          height="600"
-          id="iframe1"
-          frameBorder="0"
-          src={`https://maps.google.com/maps/embed/v1/place?key=AIzaSyDrK_Ro5O8dkIdQP1zVaCOJh15QUmm10wQ&q=${title} ${where} ${stelle} `}
-          scrolling="no"
-          marginHeight="0"
-          marginWidth="0"
-          title="posizione geografica"
-        />
-              <div className="blogsingle__back">
-                <Button to="/news" text="Torna alle news" as={Link} />
-              </div>
-            </article>
-          )}
+          <article className="blogsingle__content">
+            <p style={{ textTransform: "capitalize" }}>{tipostrutta}</p>
+            <p>
+              {where} | {stelle}
+            </p>
+            <p>
+              <b>Indirizzo:&nbsp;</b>
+              {indi}
+            </p>
+            <p>
+              <b>Telefono:&nbsp;</b>
+              {tel}
+            </p>
+            <p>
+              <b>Email:&nbsp;</b>
+              {email}
+            </p>
+            <p>
+              <b>Web:&nbsp;</b>
+              {sito}
+            </p>
+            <small style={{ marginTop: "3rem", marginBottom: "2rem" }}>
+              OPEN DATA REGIONE ABRUZZO GENNAIO 2021
+            </small>
+
+            <iframe
+              width="100%"
+              height="600"
+              id="iframe1"
+              frameBorder="0"
+              src={`https://maps.google.com/maps/embed/v1/place?key=AIzaSyDrK_Ro5O8dkIdQP1zVaCOJh15QUmm10wQ&q=${title} ${where} ${stelle} `}
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+              title="posizione geografica"
+            />
+            <div className="blogsingle__back">
+              <Button to="/news" text="Torna alle news" as={Link} />
+            </div>
+          </article>
         </PostSingleStyles>
       </section>
       <LatestPosts title="Ulteriori notizie" />
-    
-      
-    
     </>
   )
 }
