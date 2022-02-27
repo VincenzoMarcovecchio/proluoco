@@ -1,6 +1,6 @@
-const path = require("path")
-const strutto = require("./src/components/strutture.json")
-const fetch = require("node-fetch")
+import path from "path"
+import strutto from "./src/components/strutture.json"
+import fetch from "node-fetch"
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
