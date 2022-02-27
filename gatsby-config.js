@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://barcadia.netlify.com",
-        sitemap: "https://barcadia.netlify.com/sitemap.xml",
+        host: "https://proluoco-main.com",
+        sitemap: "https://proluoco-mainsitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
