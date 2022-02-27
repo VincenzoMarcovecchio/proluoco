@@ -9,15 +9,8 @@ export const FeaturedProductsStyles = styled.section`
       padding-right: var(--borderSpacing);
       margin-left: calc(var(--borderSpacing) * -1);
       width: calc(100% + (var(--borderSpacing) * 2));
-
-      @media (min-width: 1200px) {
-        padding-bottom: 0;
-        width: 100%;
-        margin-left: auto;
-        padding-left: 0;
-        padding-right: 0;
-        gap: var(--gap);
-      }
+      overflow:auto;
+  
     }
   }
 `
@@ -47,10 +40,7 @@ export const FeaturedProductStyles = styled.aside`
     min-height: 600px;
   }
 
-  @media (min-width: 1200px) {
-    flex-basis: 33.333%;
-    flex-shrink: 1;
-  }
+
 
   .features__item--img {
     position: absolute;

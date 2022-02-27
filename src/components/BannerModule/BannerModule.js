@@ -15,15 +15,28 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
         {children ? (
           children
         ) : (
-          <StaticImage
-            className="banner__image"
-            imgClassName="banner__image--content"
-            src="../../../static/macbook-color.jpg"
-            alt="Banner Image"
-            layout="fullWidth"
-            placeholder="blurred"
-          />
-        )}
+      
+          <>
+          <video
+           className="banner__image"
+          width="100%"
+          autoPlay
+          loop
+          muted
+          poster="/medieval-church.png"
+          style={{
+            display: "grid",
+            objectFit: "cover",
+            objectPosition: "bottom",
+            width: "100%",
+            height: "90vh",
+            margin: "0 auto",
+          }}
+        >
+          <source src={`/Fraine.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+</>)}
 
         <div className="container">
           <div className="banner__content">

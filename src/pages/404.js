@@ -7,7 +7,7 @@ import Button from "../components/Button/Button"
 const error = () => {
   return (
     <>
-      <Seo title="Error" />
+      <Seo title="Errore" />
       <Layout>
         <div className="section">
           <div className="container container__tight">

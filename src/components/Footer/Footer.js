@@ -36,7 +36,7 @@ const Footer = () => {
           <FooterMenuStyles className="footer__menu products__menu">
             <h5>
               <Link to="/products">
-                All Products<span>.</span>
+                Tutti i prodotti
               </Link>
             </h5>
             <ul>
@@ -47,7 +47,7 @@ const Footer = () => {
                   <li key={index}>
                     <Link to={gatsbyPath}>
                       {title}
-                      <span>.</span>
+                    
                     </Link>
                   </li>
                 )
@@ -62,7 +62,7 @@ const Footer = () => {
         siteMeta.linkedinUsername ? (
           <FooterMenuStyles className="footer__menu social__menu">
             <h5>
-              Follow Barcadia<span>.</span>
+              Segui proloco
             </h5>
             <ul>
               {siteMeta.twitterUsername && (
