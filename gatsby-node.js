@@ -1,6 +1,6 @@
-import path from "path"
-import strutto from "./src/components/strutture.json"
-import axios from "axios"
+const path = require("path")
+const strutto = require("./src/components/strutture.json")
+const fetch = require ("node-fetch")
 //JKJKJ
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -39,9 +39,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     try {
       let ciao = await lokka.data.kale.results.links[i]
 
-      let rollot = await axios(`https://lokkalle.herokuapp.com/?q=${ciao}`)
+      let rollot = await fetch(`https://lokkalle.herokuapp.com/?q=${ciao}`)
 
-      let gigi = await rollot.data.text()
+      let gigi = await rollot.text()
 
       const duto = await JSON.parse(gigi)
 
@@ -73,11 +73,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         "/"
       )[4]
 
-      let rollot = await axios(
+      let rollot = await fetch(
         `https://sheltered-meadow-66603.herokuapp.com/noti/${luca}`
       )
 
-      let gigi = await rollot.data.text()
+      let gigi = await rollot.text()
 
       const son = await JSON.parse(gigi)
 
