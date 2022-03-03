@@ -1,6 +1,13 @@
 const path = require("path")
-const strutto = require("./src/components/strutture.json")
+let strutto = require("./src/components/strutture.json")
 const fetch = require ("node-fetch")
+
+async function getStruttoData() {
+  // Extract out the page IDs from the list
+ strutto.map((listing, index) => listing.pageid = index);
+ return Object.values(strutto);
+}
+
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -74,7 +81,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       )[4]
 
       let rollot = await fetch(
-        `https://sheltered-meadow-66603.herokuapp.com/noti/${luca}`
+        `https://sheltered-meadow-66603.herokuapp.com/noti/${figa}`
       )
 
       let gigi = await rollot.text()
@@ -93,3 +100,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   }
 }
+
+
+

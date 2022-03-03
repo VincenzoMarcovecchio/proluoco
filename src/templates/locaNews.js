@@ -56,7 +56,7 @@ const Notia = ({ pageContext }) => {
 
       <section>
         <PostSingleStyles>
-          {pageContext.data.title && <h1 className="blogsingle__title">{title}</h1>}
+          {pageContext.data.title && <h1 className="blogsingle__title">{pageContext.data.title}</h1>}
 
           {pageContext.data.description && (
             <article className="blogsingle__content">

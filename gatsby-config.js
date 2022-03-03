@@ -10,8 +10,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Proloco Fraine",
-    description:
-      "Il nostro obbiettivo è pruomuovere l'informazione attraverso dati reali e risorse telematiche ",
+    description: "Il nostro obbiettivo è pruomuovere l'informazione attraverso dati reali e risorse telematiche ",
     author: "Vincenzo Marcovecchio",
     twitterUsername: "_vinny92_",
     facebookUsername: "vin.ma",
@@ -27,6 +26,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-transformer-json`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `./src/components/strutture.json`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-contentful`,
       options: {

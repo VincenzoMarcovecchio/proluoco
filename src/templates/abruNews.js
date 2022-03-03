@@ -1,6 +1,10 @@
 import React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
-
+import RichText from "../components/RichText"
+import { Link } from "gatsby"
+import Button from "../components/Button/Button"
+import { PostSingleStyles } from "../components/Post/PostStyles"
+import LatestPosts from "../components/Post/LatestPosts"
 const Abruzzio = ({ pageContext }) => {
   console.log(pageContext)
 
@@ -11,7 +15,7 @@ const Abruzzio = ({ pageContext }) => {
     })
   }, [])
   let image = pageContext.data.results.ima ? pageContext.data.results.ima : ""
-
+  let tempo = new Date();
   return (
     <>
       <GatsbySeo
